@@ -1,6 +1,5 @@
 \documentclass{report}
 
-%\usepackage{palatino}
 \pagenumbering{gobble}
 \usepackage[english]{babel}
 \usepackage[pdftex]{color,graphicx}
@@ -19,65 +18,101 @@
 \begin{document}
 \maketitle
 \section*{Abstract}
+In this tutorial, I propose to offer a comprehensive, definitive, clarifying
+tutorial on the practice and process of scientific software installation in the
+user-space on large-scale computational infrastructures.
 
 \section*{Detailed description}
+Scientific software installation process is often taken for granted. Due to
+this, the installations often are suboptimized and results in an
+underperforming software and often vulnerable to complex configurations, patchy
+or outright erroneous behavior.  In particular with the advent of python
+ecosystem, and a number of supported install methods the waters have muddied
+quite a bit that often makes users resisting installing software or face
+difficulties after a faulty installation.
+
 \subsection*{Tutorial goals}
 \begin{enumerate}
-\item Share knowledge of 
+\item Share knowledge of scientific software installation in user space over compute clusters and supercomputers
+\item Demonstrate best practices for software installation 
+\item Clarify the concepts, principles and patterns found in the software installation process
 \end{enumerate}
 
 \subsection*{Relevance of topic to conference attendees}
-I strongly believe the topic is relevant and useful to conference attendees. Consider the following user scenarios:
+I believe the topic is relevant and useful to conference attendees. The following scenarios support my belief:
 \begin{itemize}
-\item A researcher 
+\item A researcher experimenting with several versions of a software library would like to efficiently install them in their home area.
+\item A scientist who extends a popular scientific software and would like to link it to a cluster installed library.
+\item Users who would like to use specialized compilers such as NAG or PGI that are not always available systemwide.
+\item Users who would like to supplement the system installed libraries for GPUs with their own Kokkos driven codes.
 \end{itemize}
 
 \subsection*{Targeted audience}
+\begin{itemize}
+\item System administrators and managers who might want to re-use the tutorial for the users of their home cluster environment.
+\item Science users will benefit with the clear understanding of the process of software installation crystalized and clarified.
+\end{itemize}
 \subsection*{Content level (\% beginner, \% intermediate, \% advanced)}
 80 \% Beginner, 10 \% intermediate, 10 \% advanced
 \subsection*{Audience prerequisites}
-
-\subsection*{General description of tutorial content}
-Through this tutorial, we  intend to demonstrate and impart the knowledge of
+Basic knowledge and hands-on experience on Linux command-line. Understanding of
+basic Linux concepts such as paths, files and directories, permissions etc.
 
 \section*{Detailed outline of the tutorial}
 \begin{enumerate}
 \item Overview and Logistics
   \begin{enumerate}
-    \item Slides and Practice data Download
+    \item Motivation: why yum and apt does not work on my HPC Environment
+    \item Slides and Practice Software Packages Download
   \end{enumerate}
-\item Linux Basics
+\item The Make Basics
   \begin{enumerate}
-    \item Anatomy of a Linux command
+    \item Anatomy
   \end{enumerate}
-\item Streams, Pipes and Redirection
+\item The configure, make, make test, make install workflow
   \begin{enumerate}
-    \item The pipe: run second command using the output of first
+    \item Configure Concept
+    \item Configure Script
+    \item Configure Examples
+    \item Make and Make Install nitty-gritty
+    \item Post-install setup
   \end{enumerate}
-\item Classic Productivity Tools
+\item The ccmake, cmake, make workflow
+    \begin{enumerate}
+      \item cmake Fundamentals
+      \item cmake Troubleshooting
+      \item cmake examples
+    \end{enumerate}
+\item Compilers times Libraries times Versions Combinatorics
   \begin{enumerate}
-    \item The versatile find
+    \item How to manage efficiently
+    \item Updates and upgrades
   \end{enumerate}
-\item Safe and Secure Use of Facilities
+\item The Python Zoo
   \begin{enumerate}
-    \item ssh: commands and config
+    \item 2 vs 3 implications
+    \item pip / pip3 and conda
+    \item setup.py and wheel
+    \item requirements.txt
+    \item environment and virtual env
+    \item update / upgrade
+    \item Tips and Tricks
   \end{enumerate}
-\item Session Management with Screen and Tmux
+\item Other Software Installation Methods
+    \begin{enumerate}
+        \item spack and easy\_install
+        \item rpm in userspace
+        \item rubygems, npm, luarocks, cargo
+        \item java and apache ant 
+    \end{enumerate}
+\item Miscellaneous Tips
   \begin{enumerate}
-    \item About screen and tmux
-  \end{enumerate}
-\item Scripting for HPC
-  \begin{enumerate}
-    \item Basics
-%   \item Should I write a script or a program
-  \end{enumerate}
-\item Miscellaneous Productivity Tools
-  \begin{enumerate}
-    \item bc : a versatile math library and language
+    \item Use session managers for long builds
+    \item Save logs and successful commands
   \end{enumerate}
 \item Summary and Conclusions
   \begin{enumerate}
-    \item A cheatsheet to take home
+    \item A handy cheatsheet to take home
   \end{enumerate}
 \end{enumerate}
 
@@ -98,14 +133,11 @@ We agree to release the notes for the SC18 tutorial digital copy.
 
 \end{document}
 
-Abstract
-
 Introduction
 
 Plan
 
 Audience and Benefits
-
 
 user space scientific software installation
 
@@ -131,15 +163,6 @@ Compilers times Libraries times versions
 update / upgrade software
 
 The python zoo
-    2 vs 3
-    pip / pip3
-    conda
-    setup.py
-    requirements
-    wheel
-    environments
-    virtual env
-    update / upgrade
 
 userspace rpms
     rare but possible
@@ -147,8 +170,6 @@ userspace rpms
 dangers and pitfalls
 system-level libraries
 best practices
-
-spack and easyinstall
 
 java ant apache build
 
