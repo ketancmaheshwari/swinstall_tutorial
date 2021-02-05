@@ -9,7 +9,7 @@
 \setlist[itemize]{leftmargin=*,noitemsep}
 \usepackage[T1]{fontenc}
 
-\title{ Title\\
+\title{Scientific Software Installation in the User Space\\
        \large A tutorial proposal for PEARC'21
 			 }
 
@@ -33,9 +33,10 @@ difficulties after a faulty installation.
 
 \subsection*{Tutorial goals}
 \begin{enumerate}
-\item Share knowledge of scientific software installation in user space over compute clusters and supercomputers
-\item Demonstrate best practices for software installation 
-\item Clarify the concepts, principles and patterns found in the software installation process
+\item To comprehensively cover, document and present all the facets of the process and practice of scientific software installation.
+\item Share knowledge of scientific software installation in user space over compute clusters and supercomputers.
+\item Demonstrate best practices for software installation.
+\item Clarify the concepts, principles and patterns found in the software installation process.
 \end{enumerate}
 
 \subsection*{Relevance of topic to conference attendees}
@@ -80,8 +81,7 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \item The ccmake, cmake, make workflow
     \begin{enumerate}
       \item cmake Fundamentals
-      \item cmake Troubleshooting
-      \item cmake examples
+      \item cmake Troubleshooting and examples
     \end{enumerate}
 \item Compilers times Libraries times Versions Combinatorics
   \begin{enumerate}
@@ -101,14 +101,15 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \item Other Software Installation Methods
     \begin{enumerate}
         \item spack and easy\_install
-        \item rpm in userspace
         \item rubygems, npm, luarocks, cargo
         \item java and apache ant 
+        \item rpm and binary installs
     \end{enumerate}
 \item Miscellaneous Tips
   \begin{enumerate}
     \item Use session managers for long builds
     \item Save logs and successful commands
+    \item System architecture and other considerations
   \end{enumerate}
 \item Summary and Conclusions
   \begin{enumerate}
@@ -117,19 +118,17 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \end{enumerate}
 
 \subsection*{A statement about ``hands-on'' exercises}
-Each section in the tutorial will be followed by hands-on exercises. The hands on exercises are based on:
+Each section in the tutorial will have hands-on exercises. The hands on exercises are based on:
 \begin{enumerate}
-\item The data already available on a
-typical Linux system such as files and processes
-\item Based on the two data
-files that are supplied with the tutorial.
+\item The ideas and concepts discussed in the section 
+\item Free and open-source science software that are popularly used
 \end{enumerate}
-We will provide the solutions to hands-on exercises to students at the end of the tutorial.
+I will provide the solutions to hands-on exercises to students at the end of the tutorial.
 
-\subsection*{Resume or CV for each presenter (Make sure this includes a list of short courses each presenter has taught)}
+\subsection*{Resume or CV for each presenter}
 Attached.
-\subsection*{A statement agreeing to release the notes for the SC18 tutorial digital copy}
-We agree to release the notes for the SC18 tutorial digital copy.
+%\subsection*{A statement agreeing to release the notes for the SC18 tutorial digital copy}
+%I agree to release the notes for the SC18 tutorial digital copy.
 
 \end{document}
 
@@ -139,7 +138,6 @@ Plan
 
 Audience and Benefits
 
-user space scientific software installation
 
 yum, apt, dnf etc. are ok on VMs and Desktops but not on clusters. Why?
 
@@ -174,11 +172,4 @@ best practices
 java ant apache build
 
 binary installations
-
-System architecture considerations
-
-Other systems:
-npm
-rubygems
-luarocks
 
