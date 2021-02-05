@@ -13,23 +13,26 @@
        \large A tutorial proposal for PEARC'21
 			 }
 
-\author{Ketan Maheshwari}
+\author{Ketan Maheshwari and Hong Liu}
 
 \begin{document}
 \maketitle
 \section*{Abstract}
-In this tutorial, I propose to offer a comprehensive, definitive, clarifying
+In this tutorial, we propose to offer a comprehensive, definitive, clarifying
 tutorial on the practice and process of scientific software installation in the
 user-space on large-scale computational infrastructures.
 
 \section*{Detailed description}
 Scientific software installation process is often taken for granted. Due to
-this, the installations often are suboptimized and results in an
+this, many installations end up being suboptimal and results in an
 underperforming software and often vulnerable to complex configurations, patchy
-or outright erroneous behavior.  In particular with the advent of python
-ecosystem, and a number of supported install methods the waters have muddied
-quite a bit that often makes users resisting installing software or face
-difficulties after a faulty installation.
+or outright erroneous behavior. Furthermore, as the installation process varies
+from software to software, it gets difficult and tedious discouraging end-users
+from installing it. This results in users stuck with an older version of
+software preventing them from using the latest features.  In particular with
+the advent of python ecosystem, and a number of supported install methods the
+waters have muddied quite a bit that often makes users resisting installing
+software or face difficulties after a faulty installation.
 
 \subsection*{Tutorial goals}
 \begin{enumerate}
@@ -37,10 +40,11 @@ difficulties after a faulty installation.
 \item Share knowledge of scientific software installation in user space over compute clusters and supercomputers.
 \item Demonstrate best practices for software installation.
 \item Clarify the concepts, principles and patterns found in the software installation process.
+\item Present plenty of practical and hands-on examples of contemporary scientific software installation process.
 \end{enumerate}
 
 \subsection*{Relevance of topic to conference attendees}
-I believe the topic is relevant and useful to conference attendees. The following scenarios support my belief:
+We believe the topic is relevant and useful to conference attendees. The following scenarios support our belief:
 \begin{itemize}
 \item A researcher experimenting with several versions of a software library would like to efficiently install them in their home area.
 \item A scientist who extends a popular scientific software and would like to link it to a cluster installed library.
@@ -63,7 +67,7 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \begin{enumerate}
 \item Overview and Logistics
   \begin{enumerate}
-    \item Motivation: why yum and apt does not work on my HPC Environment
+    \item Motivation: why yum / apt / dnf does not work on my HPC Environment
     \item Slides and Practice Software Packages Download
   \end{enumerate}
 \item The Make Basics
@@ -123,7 +127,7 @@ Each section in the tutorial will have hands-on exercises. The hands on exercise
 \item The ideas and concepts discussed in the section 
 \item Free and open-source science software that are popularly used
 \end{enumerate}
-I will provide the solutions to hands-on exercises to students at the end of the tutorial.
+We will provide the solutions to hands-on exercises to students at the end of the tutorial.
 
 \subsection*{Resume or CV for each presenter}
 Attached.
@@ -137,7 +141,6 @@ Introduction
 Plan
 
 Audience and Benefits
-
 
 yum, apt, dnf etc. are ok on VMs and Desktops but not on clusters. Why?
 
