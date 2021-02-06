@@ -18,21 +18,33 @@
 \begin{document}
 \maketitle
 \section*{Abstract}
-In this tutorial, we propose to offer a comprehensive, definitive, clarifying
-tutorial on the practice and process of scientific software installation in the
-user-space on large-scale computational infrastructures.
+We propose to offer a comprehensive, definitive and clarifying tutorial on the
+process and practice of scientific software building, installation,
+configuration and setup in the \emph{user-space} for large-scale computational
+infrastructures.
 
 \section*{Detailed description}
-Scientific software installation process is often taken for granted. Due to
-this, many installations end up being suboptimal and results in an
-underperforming software and often vulnerable to complex configurations, patchy
-or outright erroneous behavior. Furthermore, as the installation process varies
-from software to software, it gets difficult and tedious discouraging end-users
-from installing it. This results in users stuck with an older version of
-software preventing them from using the latest features.  In particular with
-the advent of python ecosystem, and a number of supported install methods the
-waters have muddied quite a bit that often makes users resisting installing
-software or face difficulties after a faulty installation.
+Scientific software installation process is often taken for granted.
+Installations often end up being suboptimal resulting in an underperforming
+software. Furthermore, a subpar installation often undergoes through erratic
+post-install configuration, patches, etc. causing further degration.
+
+As the technical installation process varies from software to software, it gets
+difficult and tedious process that discourages users from installing some
+packages. This results in users stuck with older versions of software
+preventing them from using the newer features. In many cases, users rely on
+sysadmins for tedious installs but since users are many and sysadmins are
+limited in number, this either causes substantial delays or limited installs. 
+
+With the advent of the python ecosystem, and a number of supported install methods
+the waters have muddied quite a bit that often makes users resisting installing
+software or face difficulties after a faulty installation due to conflicting methods.
+
+Our tutorial is a result of 10+ years of combined experience installing and
+setting up a wide variety of software packages for self and users over a number
+of cluster and supercomputing environments. We bring clarity to the various
+software installation paradigms and give structure to an often perceived
+chaotic process.
 
 \subsection*{Tutorial goals}
 \begin{enumerate}
@@ -66,34 +78,35 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \section*{Detailed outline of the tutorial}
 \begin{enumerate}
 \item Overview and Logistics
-  \begin{enumerate}
-    \item Motivation: why yum / apt / dnf does not work on my HPC Environment
-    \item Slides and Practice Software Packages Download
-  \end{enumerate}
+  \begin{itemize}
+    \item Motivation: why yum / apt / dnf does not work? 
+    \item Slides and Practice Software Packages download
+  \end{itemize}
 \item The Make Basics
-  \begin{enumerate}
+  \begin{itemize}
     \item Anatomy
-  \end{enumerate}
+    \item Functionality and Pitfalls
+  \end{itemize}
 \item The configure, make, make test, make install workflow
-  \begin{enumerate}
+  \begin{itemize}
     \item Configure Concept
     \item Configure Script
     \item Configure Examples
     \item Make and Make Install nitty-gritty
     \item Post-install setup
-  \end{enumerate}
+  \end{itemize}
 \item The ccmake, cmake, make workflow
-    \begin{enumerate}
+    \begin{itemize}
       \item cmake Fundamentals
       \item cmake Troubleshooting and examples
-    \end{enumerate}
+    \end{itemize}
 \item Compilers times Libraries times Versions Combinatorics
-  \begin{enumerate}
+  \begin{itemize}
     \item How to manage efficiently
     \item Updates and upgrades
-  \end{enumerate}
+  \end{itemize}
 \item The Python Zoo
-  \begin{enumerate}
+  \begin{itemize}
     \item 2 vs 3 implications
     \item pip / pip3 and conda
     \item setup.py and wheel
@@ -101,24 +114,24 @@ basic Linux concepts such as paths, files and directories, permissions etc.
     \item environment and virtual env
     \item update / upgrade
     \item Tips and Tricks
-  \end{enumerate}
+  \end{itemize}
 \item Other Software Installation Methods
-    \begin{enumerate}
+    \begin{itemize}
         \item spack and easy\_install
         \item rubygems, npm, luarocks, cargo
         \item Apache ant, Maven, SCons, ninja 
         \item rpm and binary installs
-    \end{enumerate}
+    \end{itemize}
 \item Miscellaneous Tips
-  \begin{enumerate}
+  \begin{itemize}
     \item Use session managers for long builds
     \item Save logs and successful commands
     \item System architecture and other considerations
-  \end{enumerate}
+  \end{itemize}
 \item Summary and Conclusions
-  \begin{enumerate}
+  \begin{itemize}
     \item A handy cheatsheet to take home
-  \end{enumerate}
+  \end{itemize}
 \end{enumerate}
 
 \subsection*{A statement about ``hands-on'' exercises}
