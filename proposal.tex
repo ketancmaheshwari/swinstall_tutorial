@@ -4,6 +4,7 @@
 \usepackage[english]{babel}
 \usepackage[pdftex]{color,graphicx}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 \setenumerate{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 \setlist[itemize]{leftmargin=*,noitemsep}
@@ -13,7 +14,7 @@
        \large A tutorial proposal for PEARC'21
 			 }
 
-\author{Ketan Maheshwari and Hong Liu}
+\author{Ketan Maheshwari and Hong Liu\\ Oak Ridge National Laboratory}
 
 \begin{document}
 \maketitle
@@ -21,34 +22,40 @@
 We propose to offer a comprehensive, definitive and clarifying tutorial on the
 process and practice of scientific software building, installation,
 configuration and setup in the \emph{user-space} for large-scale computational
-infrastructures.
+infrastructures. The tutorial is motivated by authors' combined 10+ years of
+experience working with science users addressing software related challenges.
 
 \section*{Detailed description}
 Scientific software installation process is often taken for granted.
-Installations often end up being suboptimal resulting in an underperforming
-software. Furthermore, a subpar installation often undergoes through erratic
-post-install configuration, patches, etc. causing further degration.
+Consequently, installations end up being suboptimal resulting in an underperforming
+or worse, erratic software. Furthermore, a subpar installation often undergoes through faulty
+post-install configuration, patches, etc. causing further degradation.
 
-As the technical installation process varies from software to software, it gets
-difficult and tedious process that discourages users from installing some
-packages. This results in users stuck with older versions of software
-preventing them from using the newer features. In many cases, users rely on
-sysadmins for tedious installs but since users are many and sysadmins are
-limited in number, this either causes substantial delays or limited installs. 
+As the technical installation methods vary from software to software, the
+process gets difficult and tedious that discourages users from installing some
+packages on their own. This results in users stuck with older versions of
+software preventing them from exploring newer features. In many cases, users
+rely on sysadmins for such installs but this either causes delays or limited
+installs owing to limited sysadmin hours at a typical computing center. 
 
 With the advent of the python ecosystem, and a number of supported install methods
 the waters have muddied quite a bit that often makes users resisting installing
-software or face difficulties after a faulty installation due to conflicting methods.
+software or face difficulties after a faulty installation due to conflicting
+methods. It might even be impractical to install some such packages at system
+level forcing users to install them in user-space. Many problems in python
+ecosystems could be traced to a faulty installation which when properly
+addressed solves them.
 
 Our tutorial is a result of 10+ years of combined experience installing and
-setting up a wide variety of software packages for self and users over a number
-of cluster and supercomputing environments. We bring clarity to the various
-software installation paradigms and give structure to an often perceived
-chaotic process.
+setting up a wide variety of software packages for self and domain users over a
+number of cluster and supercomputing environments. We bring clarity to the
+various software installation paradigms and give structure to a process that is
+often perceived chaotic and irregular (which we believe is true to some
+extent).
 
 \subsection*{Tutorial goals}
 \begin{enumerate}
-\item To comprehensively cover, document and present all the facets of the process and practice of scientific software installation.
+\item To comprehensively cover, document and present the facets of the process and practice of scientific software installation.
 \item Share knowledge of scientific software installation in user space over compute clusters and supercomputers.
 \item Demonstrate best practices for software installation.
 \item Clarify the concepts, principles and patterns found in the software installation process.
@@ -62,13 +69,18 @@ We believe the topic is relevant and useful to conference attendees. The followi
 \item A scientist who extends a popular scientific software and would like to link it to a cluster installed library.
 \item Users who would like to use specialized compilers such as NAG or PGI that are not always available systemwide.
 \item Users who would like to supplement the system installed libraries for GPUs with their own Kokkos driven codes.
+\item Clarification on what is happening under the hood when issuing command
+such as \texttt{pip3 install torch==1.0.1 -f
+https://download.pytorch.org/whl/cu92/stable --user} which in turn will help
+users understand the finer details of their python environment. 
 \end{itemize}
 
 \subsection*{Targeted audience}
 \begin{itemize}
-\item System administrators and managers who might want to re-use the tutorial for the users of their home cluster environment.
-\item Science users will benefit with the clear understanding of the process of software installation crystalized and clarified.
+\item Users of Research Computing Centers will benefit with a clear understanding of the process of software installation.
+\item System administrators and managers who might want to re-use the tutorial contents for the users of their home cluster environment.
 \end{itemize}
+
 \subsection*{Content level (\% beginner, \% intermediate, \% advanced)}
 80 \% Beginner, 10 \% intermediate, 10 \% advanced
 \subsection*{Audience prerequisites}
@@ -80,37 +92,36 @@ basic Linux concepts such as paths, files and directories, permissions etc.
 \item Overview and Logistics
   \begin{itemize}
     \item Motivation: why yum / apt / dnf does not work? 
+    \item Few words about containers and virtual machines
     \item Slides and Practice Software Packages download
   \end{itemize}
 \item The Make Basics
   \begin{itemize}
-    \item Anatomy
+    \item Structure and Anatomy
     \item Functionality and Pitfalls
   \end{itemize}
 \item The configure, make, make test, make install workflow
   \begin{itemize}
-    \item Configure Concept
-    \item Configure Script
-    \item Configure Examples
-    \item Make and Make Install nitty-gritty
+    \item configure concepts, script and examples
+    \item make and make install nitty-gritty
     \item Post-install setup
   \end{itemize}
 \item The ccmake, cmake, make workflow
     \begin{itemize}
-      \item cmake Fundamentals
-      \item cmake Troubleshooting and examples
+      \item cmake process fundamentals
+      \item cmake troubleshooting and examples
     \end{itemize}
 \item Compilers times Libraries times Versions Combinatorics
   \begin{itemize}
     \item How to manage efficiently
     \item Updates and upgrades
+    \item Keeping track of and switching the environment
   \end{itemize}
 \item The Python Zoo
   \begin{itemize}
     \item 2 vs 3 implications
-    \item pip / pip3 and conda
+    \item pip / pip3, conda and requirements.txt
     \item setup.py and wheel
-    \item requirements.txt
     \item environment and virtual env
     \item update / upgrade
     \item Tips and Tricks
@@ -120,7 +131,7 @@ basic Linux concepts such as paths, files and directories, permissions etc.
         \item spack and easy\_install
         \item rubygems, npm, luarocks, cargo
         \item Apache ant, Maven, SCons, ninja 
-        \item rpm and binary installs
+        \item rpm and binary installs from ``run" scripts
     \end{itemize}
 \item Miscellaneous Tips
   \begin{itemize}
@@ -140,18 +151,17 @@ Each section in the tutorial will have hands-on exercises. The hands on exercise
 \item The ideas and concepts discussed in the section 
 \item Free and open-source science software that are popularly used
 \end{enumerate}
-We will provide the solutions to hands-on exercises to students at the end of the tutorial.
+We will provide solutions to hands-on exercises to participants at the end of the tutorial.
 
 \subsection*{Resume or CV for each presenter}
 Attached.
 %\subsection*{A statement agreeing to release the notes for the SC18 tutorial digital copy}
 %I agree to release the notes for the SC18 tutorial digital copy.
 
+\includepdf[pages=-,pagecommand={}]{ketanbio.pdf}
+\includepdf[pages=-,pagecommand={}]{HongResume.pdf}
+
 \end{document}
-
-Introduction
-
-Plan
 
 Audience and Benefits
 
