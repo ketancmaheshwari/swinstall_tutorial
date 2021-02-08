@@ -1,0 +1,116 @@
+\documentclass[11pt]{resume}
+\renewcommand{\categoryfont}{\sc}
+\usepackage[final]{pdfpages}
+\usepackage{bibunits}
+
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\addtolength{\textwidth}{-2\oddsidemargin}
+\addtolength{\textwidth}{\marginparwidth}
+\addtolength{\textwidth}{\marginparsep}
+%
+\setlength{\topmargin}{-0.5in}
+%
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\author{Ketan C Maheshwari}
+% ------ Address --------------------------------------------------------
+
+\address{\mbox{\small\tt km0@ornl.gov}\\
+	}{ Knoxville,\\ TN 37934 USA\\}	
+\begin{document}
+% \includepdf[pages=1-1]{cover_letter.pdf}
+\maketitle
+
+
+%--------------------------------objective-----------------------------------------------------
+%\begin{category}{Objective}
+%\citemnobullet To work on challenges pertaining to HPC systems.
+%\end{category}
+
+% ----------------------------- Education ------------------------------------------------------
+\begin{category}{Education}
+\citem{University of Nice at Sophia Antipolis}, France.\\
+PhD with \textbf{Highest Honors}, January 2011.\\
+Research on parallel workflow expression and enactment on large-scale
+distributed computing infrastructures for data intensive applications. 
+
+%======================================================================================
+
+\citem{University of Amsterdam}, Amsterdam, The Netherlands.\\
+Research M.Sc.(NVAO-accredited) in Grid Computing, August 2007.\\
+\textbf{Masters Thesis Work}\\
+To achieve integration and interoperability among several Workflow Management Systems and Problem Solving Environments (PSE) in order to realize a Medical Image Analysis Support System at the University of Amsterdam Academisch Medical Centrum, Amsterdam.\\
+\citem{Gujarat University}, Ahmedabad, India.\\
+Masters in Computer Applications (MCA), September 2001.\\
+\textbf{Major Courses}: Fundamentals of Programming, Database Systems, Operating Systems, Data and File Structures, Object Oriented Analysis and Design, Discrete Mathematical Structures, Numerical Methods, Software Engineering, Client Server Technologies, Networking Technologies, Computer Architecture.
+\citem{Gujarat University}, Ahmedabad, India.\\
+Bachelors in Science, June 1998.
+\end{category}
+
+% ---------------------------------- Work experience ---------------------------------------------
+
+\begin{category}{Work}
+\citem{Linux Systems Engineer} Oak Ridge National Laboratory, 2017 - current.
+
+\citem{HPC Consultant} Center for Research Computing, University of Pittsburgh, 2016 - 2017.
+Application development and deployment, source code debugging, expert and dedicated HPC user support,
+implementation and management of Petabyte ZFS storage system, gave workshops on R, CUDA, advanced Linux and Python.
+
+\citem{Postdoctoral Researcher} Distributed Systems Lab, Argonne National
+Laboratory, 2011 - 2016.\\
+Supporting large-scale applications on HPC infrastructures, user-engagement
+catalyst and researcher for HPC and HTC infrastructures. Main activities
+include developing, deploying and running parallel applications over IBM BG/Q,
+Cray XE6 and Intel supercomputers, clusters and clouds. Applications
+include protein docking, fMRI image processing, energy systems,
+seismology simulation, and power grid modelling. Funded by NSF, DOE and
+NIH.
+
+\citem{ICT Developer} Informatics Institute(IvI), University of
+Amsterdam(UvA), 2006 to 2007.\\
+Globus File Transfer integration to
+achieve transfer of large number of big files between Academisch Medical
+Centrum (AMC) and Storage Resource Broker (SRB) at SARA, Amsterdam. Integrated
+with a Visual Resource Browser.
+
+\end{category}
+
+\begin{category}{Synergistic Activities}
+\citem{FEMA COVID-19 Support.} Active support of FEMA sponsored COVID-19 research in collaboration with Johns Hopkins researchers. \emph{2020 Lab Director's Award winner for this work}
+\citem{Federated Id.} Multi-lab Collaboration as part of the Distributed Compute and Data Ecosystem (DCDE) undertaking research in federation of identities. 
+\citem{Workflow Research.} Collaborative inter-division workflow research with Nuclear Sciences Division at Oak Ridge.
+%\citem{Courses} taught Operating Systems, Java and C++ courses to undergrad students during PhD at Univ of Nice in 2010. 
+%\citem{Seminar} at the League of Professional System Administrators (LOPSA) East Tennessee in 2018.
+\end{category}
+
+%------------------------ Certification -------------------------------------------------
+\begin{category}{Awards}
+\citembullet~~Lab Director's Award for COVID-19 research Tech support (2020)
+\citembullet~~First winner at Smokey Mountain Data Challenge (2018)
+\citembullet~~\textbf{RedHat Certified System Administrator} (190-042-697)
+\end{category}
+
+%\newpage
+% ------- Skills ------------------------------------------------------
+\begin{category}{Skills}
+\citembullet Expertise in HPC toolchains, compilers, debuggers, schedulers, storage, network
+\citembullet Expertise and experience in development and deployment of workflows to support leadership scale science, container management, Kubernetes
+\citembullet Linux, ranked top 3~\% of Linux StackExchange Community (Jan 2021)
+\end{category}
+
+\bibliographystyle{unsrt}
+\renewcommand\refname{Relevant Publications \& Presentations}
+\bibliography{selectedpub}
+\nocite{*}
+% \includepdf[pages=1-1]{cover_letter.pdf}
+\end{document}
